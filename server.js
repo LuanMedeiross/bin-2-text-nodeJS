@@ -1,6 +1,8 @@
 const http = require('http')
 const fs = require('fs')
 
+const port = process.env.PORT || 3000
+
 http.createServer((req, res) => {
 
 	let arq = ''
@@ -32,4 +34,6 @@ http.createServer((req, res) => {
 	})
 
 	console.log(arq)
-}).listen(3000 || process.env.PORT)
+}).listen(port, () => {
+	console.log("Servidor iniciado em http://localhost:" + port)
+})
