@@ -34,5 +34,34 @@
 			</div>
 		</div>
 	</body>
+	<script>
+		if( navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)) {
+        	$("*").css(
+        		"font-size", "30px"
+        	)
+			
+			$("#bintotext").css({
+				"left": "10%",
+				"height": "1500px",
+				"width": "800px",
+ 			})
+
+			$("#content").css({
+				"height": "1500px",
+				"width": "800px"
+			})
+
+			$(".form").css({
+				"padding": "15px",
+				"width": "770px"
+			})
+        }
+	</script>
 	<script src="script.js"></script>
 </html>

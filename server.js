@@ -16,7 +16,7 @@ http.createServer((req, res) => {
 		// Se a url da requisição não for '/'
 		// o arquivo será o diretório atual
 		// + a url da requisição
-		arq = __dirname + "/static/" + req.url
+		arq = __dirname + "/static" + req.url
 
 	fs.readFile(arq, (err, data) => {
 		if (err) {
