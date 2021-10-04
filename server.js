@@ -32,8 +32,6 @@ http.createServer((req, res) => {
 		res.writeHead(200)
 		res.end(data)
 	})
-
-	console.log(arq)
 }).listen(port, () => {
 	console.log("Servidor iniciado em http://localhost:" + port)
 })
