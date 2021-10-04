@@ -78,7 +78,6 @@ $("#convert").click(() => {
 })
 
 $("#swap").click(() => {
-	let temp
 
 	if ($("#convert").val() == "bintotext") {
 		input.prop("placeholder", "Text Input ...")
@@ -92,9 +91,9 @@ $("#swap").click(() => {
 		$("title").html("Bin to Text")
 	}
 
-	temp = input.val()
-	input.val(output.val())
-	output.val(temp)
+	input.val("")
+	output.val("")
+	
 })
 
 $("#reset").click(() => {
