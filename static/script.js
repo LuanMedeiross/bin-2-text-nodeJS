@@ -20,7 +20,7 @@ $("#convert").click(() => {
 
 		let iBytes = input.val().split(' ')
 		let bytes  = []
-		let dex    = []
+		let ascii  = []
 		let text   = ""
 
 		// Se a quantidade de caracteres em cada
@@ -35,18 +35,18 @@ $("#convert").click(() => {
 		})
 		
 		bytes.forEach((byte) => {
-			let dexN = 0
+			let asciiN = 0
 
 			for(let i = 0; i < byte.length; i++) {
 				if (byte[i] == 1)
-					dexN += bits[i]
+					asciiN += bits[i]
 			}
 
-			dex.push(dexN)
+			ascii.push(asciiN)
 		})
 
-		dex.forEach((d) => {
-			text += String.fromCharCode(d)
+		ascii.forEach((a) => {
+			text += String.fromCharCode(a)
 		})
 
 		output.val(text)
